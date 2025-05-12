@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unnam Dedeepya | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+  <h1>Unnam Dedeepya</h1>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button id="darkToggle" class="btn">Enable Dark Mode</button>
+</nav>
+
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="hero-content">
+    <img src="assets/profile.jpg" alt="Unnam Dedeepya" class="profile-pic" />
+    <div class="intro-text">
+      <h2>Hello, I'm <span>Unnam Dedeepya</span></h2>
+      <p>Java Developer & Web Enthusiast</p>
+    </div>
+  </div>
+</header>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm an aspiring data analyst passionate about working with data and making analysis. I am also curious on building web applications, learning backend with Java, and constantly growing in tech.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div>Java</div>
+      <div>Python</div>
+      <div>R</div>
+      <div>Spring Boot</div>
+      <div>HTML5</div>
+      <div>CSS3</div>
+      <div>JavaScript</div>
+      <div>MySQL</div>
+      <div>Git & GitHub</div>
+      <div>Power BI</div>
+      <div>Microsoft Excel</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="card">
+        <h3>Project 1</h3>
+        <p>📊 Blinkit Sales Analytics Dashboard (Power BI)
+          Developed an interactive sales analytics dashboard for Blinkit using Power BI, focusing on key performance indicators such as total sales, average order value, customer ratings, and product category performance. 
+          Utilized Power Query for data transformation, DAX for calculated measures, and implemented dynamic filters to enable detailed analysis by outlet type, location tier, and product attributes. 
+          The dashboard provides actionable insights into sales trends, customer behavior, and inventory distribution, supporting data-driven decision-making.
+        </p>
+        <a href="https://github.com/UnnamDedeepya/BlinkIT-Sales-Analytics-using-Power-BI" target="_blank">Sales Aalytics</a>
+      </div>
+      <div class="card">
+        <h3>Project 2</h3>
+        <p>📌 IMDb Sentiment Analysis Using Machine Learning
+Built a sentiment analysis model to classify IMDb movie reviews as positive or negative. 
+Applied NLP techniques for text preprocessing and feature extraction using TF-IDF and Bag of Words. 
+Implemented and compared traditional ML algorithms—Logistic Regression and Multinomial Naive Bayes—using Python and Scikit-learn to evaluate model performance with accuracy and F1-score metrics.</p>
+        <a href="https://github.com/UnnamDedeepya/IMDb-sentimental-analysis-using-ML" target="_blank">IMDb Analysis</a>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>Click the button below to view/download my resume.</p>
+    <a href="assets/resume.pdf" class="btn" target="_blank">Download Resume</a>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="/contact" method="POST">
+      <input type="text" name="name" placeholder="YourName" required/>
+      <input type="email" name="email" placeholder="Email" required/>
+      <textarea name="message" placeholder="Your Message!!" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Unnam Dedeepya</p>
+    <div class="social-icons">
+      <a href="https://github.com/UnnamDedeepya" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/unnam-dedeepya-b25130263" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:dedeepyaunnam02@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal().reveal('section', {
+    duration: 800,
+    origin: 'bottom',
+    distance: '50px',
+    reset: false
+  });
+</script>
+
+</body>
+</html>
