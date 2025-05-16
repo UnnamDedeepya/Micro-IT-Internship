@@ -9,23 +9,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Contact Form Validation
+// Contact Form Submit + Backend Connection
 const form = document.querySelector("form");
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
   const name = form.name.value.trim();
   const email = form.email.value.trim();
   const message = form.message.value.trim();
 
   if (!name || !email || !message) {
-    e.preventDefault();
     alert("Please fill in all fields.");
     return;
   }
 
   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (!emailPattern.test(email)) {
-    e.preventDefault();
     alert("Please enter a valid email address.");
+    return;
+  }
+
+  const formData = { name, email, message };
+
+  try {
+    const response = await fetch("http://localhost:8080/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const result = await response.text();
+    alert(result);
+    form.reset();
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Something went wrong. Please try again later.");
   }
 });
 

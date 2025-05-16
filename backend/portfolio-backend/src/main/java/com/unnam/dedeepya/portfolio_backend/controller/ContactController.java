@@ -1,10 +1,10 @@
-package com.yourname.portfolio.controller;
+package com.unnam.dedeepya.portfolio_backend.controller;
 
-import com.yourname.portfolio.model.ContactForm;
+import com.unnam.dedeepya.portfolio_backend.model.ContactForm;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "*") // allow frontend requests from any origin
+@CrossOrigin(origins = "*") // Allow requests from all origins (frontend)
 public class ContactController {
 
     @PostMapping("/contact")
