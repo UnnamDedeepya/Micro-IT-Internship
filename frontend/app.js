@@ -32,7 +32,8 @@ form.addEventListener("submit", async function (e) {
   const formData = { name, email, message };
 
   try {
-    const response = await fetch("http://localhost:8080/contact", {
+    const response = await fetch("https://portfolio-backend-production-22c0.up.railway.app/contact", {
+
       method: "POST",
       headers: {
         "Content-Type": "application/json"
