@@ -1,19 +1,25 @@
 package com.unnam.dedeepya.portfolio_backend.controller;
 
 import com.unnam.dedeepya.portfolio_backend.model.ContactForm;
+import com.unnam.dedeepya.portfolio_backend.service.EmailService;
+import org.springframework.beans.factory.annotation.Autowired;
+import com.unnam.dedeepya.portfolio_backend.model.ContactForm;
 import org.springframework.web.bind.annotation.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+
 
 @RestController
 @CrossOrigin(origins = "*") // Allow requests from all origins (frontend)
 public class ContactController {
 
-    @PostMapping("/contact")
-    public String submitForm(@RequestBody ContactForm form) {
-        System.out.println("New contact form submission:");
-        System.out.println("Name: " + form.getName());
-        System.out.println("Email: " + form.getEmail());
-        System.out.println("Message: " + form.getMessage());
+     @Autowired
+    private EmailService emailService;
 
-        return "Message received. Thank you, " + form.getName() + "!";
-    }
+    @PostMapping("/contact")
+public String submitForm(@RequestBody ContactForm form) {
+    emailService.sendContactEmail(form.getName(), form.getEmail(), form.getMessage());
+    return "Thank you, " + form.getName() + "! Your message has been sent to our email.";
+}
 }
