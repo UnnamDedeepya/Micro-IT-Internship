@@ -26,13 +26,13 @@ Micro-IT-Internship/
 │   ├── style.css
 │   └── app.js
 ├── backend/
-│   ├── src/
-│   │   └── main/
-│   │       └── java/com/unnam/dedeepya/...
-│   │           ├── controller/ContactController.java
-│   │           ├── model/ContactForm.java
-│   │           └── service/EmailService.java
-│   └── resources/application.properties
+│    └── src/
+│     └── main/
+│         └── java/com/unnam/dedeepya/...
+│         |   ├── controller/ContactController.java
+│         |   ├── model/ContactForm.java
+│         |   └── service/EmailService.java
+│         └── resources/application.properties
 └── README.md
 ```
 
@@ -44,7 +44,7 @@ Micro-IT-Internship/
 - ✅ Responsive design with light/dark theme toggle
 - ✅ Contact form integrated with Spring Boot REST API
 - ✅ Sends form submissions via email using Gmail SMTP
-- ❌ No database needed — lightweight and fast!
+
 
 ---
 
